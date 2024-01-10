@@ -4,14 +4,14 @@ jenkins:
   securityRealm:
     local:
       users:
-        - id: "rye"
-          name: "Rye Carrigan"
+        - id: "tim"
+          name: "Tim Hosey"
           password: ${decodeBase64:${adminPassword}}
           properties:
             - blueSteelRedirectOptOutProperty:
                 optOut: true
             - mailer:
-                emailAddress: "rcarrigan@cloudbees.com"
+                emailAddress: "thosey@cloudbees.com"
         - id: "orange"
           name: "Orange Demo"
           password: ${decodeBase64:${demoPassword}}
@@ -19,7 +19,7 @@ jenkins:
             - blueSteelRedirectOptOutProperty:
                 optOut: true
             - mailer:
-                emailAddress: "rcarrigan+orange@cloudbees.com"
+                emailAddress: "thosey+orange@cloudbees.com"
         - id: "purple"
           name: "Purple Demo"
           password: ${decodeBase64:${demoPassword}}
@@ -27,7 +27,7 @@ jenkins:
             - blueSteelRedirectOptOutProperty:
                 optOut: true
             - mailer:
-                emailAddress: "rcarrigan+purple@cloudbees.com"
+                emailAddress: "thosey+purple@cloudbees.com"
   primaryView:
     masters:
       jobFilters:
