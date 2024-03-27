@@ -23,4 +23,3 @@ masterProvisioning:
     cpus: "1.5"
     disk: "50"
     memory: "3072"
-    nodeSelectors: "jenkins=controller"
