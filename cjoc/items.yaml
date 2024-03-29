@@ -2,3 +2,4 @@ removeStrategy:
   rbac: SYNC
   items: NONE
 
+items:
