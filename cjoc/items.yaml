@@ -3,3 +3,7 @@ removeStrategy:
   items: NONE
 
 items:
+  - kind: "folder"
+    name: project-1
+    displayName: "Project Alpha"
+    description: "Project Alpha is going to change the world!"
