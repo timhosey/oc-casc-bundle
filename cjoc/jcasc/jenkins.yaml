@@ -89,7 +89,7 @@ unclassified:
             defaultVersion: "main"
             scmSource:
               git:
-                remote: "https://github.com/ryecarrigan/cbci-casc-bundles.git"
+                remote: "https://github.com/timhosey/cbci-casc-bundles.git"
                 traits:
                   - "gitBranchDiscovery"
     pollingPeriod: 120
@@ -100,7 +100,7 @@ unclassified:
     provisionControllerOnCreation: false
     fireAndForget: true
   cloudbeesPlatform:
-    url: "https://cd.rye.ps.beescloud.com/"
+    url: "https://cd.tim.ps.beescloud.com/"
   gitHubPluginConfig:
     configs:
       - credentialsId: "github-token"
