@@ -1,7 +1,7 @@
 jenkins:
   authorizationStrategy: "cloudBeesRoleBasedAccessControl"
   numExecutors: 1
-    securityRealm:
+  securityRealm:
     local:
       users:
         - id: "admin"
