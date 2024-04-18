@@ -6,7 +6,7 @@ jenkins:
       users:
         - id: "admin"
           name: "Administrator"
-          password: "changeme"
+          password: ${decodeBase64:Y2hhbmdlbWU=}
           properties:
             - blueSteelRedirectOptOutProperty:
                 optOut: true
