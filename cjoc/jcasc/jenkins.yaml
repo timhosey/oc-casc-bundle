@@ -1,17 +1,5 @@
 jenkins:
-  authorizationStrategy: "cloudBeesRoleBasedAccessControl"
   numExecutors: 1
-  securityRealm:
-    local:
-      users:
-        - id: "admin"
-          name: "Administrator"
-          password: ${decodeBase64:Y2hhbmdlbWU=}
-          properties:
-            - blueSteelRedirectOptOutProperty:
-                optOut: true
-            - mailer:
-                emailAddress: "thosey@cloudbees.com"
   primaryView:
     masters:
       jobFilters:
