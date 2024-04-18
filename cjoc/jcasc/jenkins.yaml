@@ -1,33 +1,6 @@
 jenkins:
   authorizationStrategy: "cloudBeesRoleBasedAccessControl"
   numExecutors: 1
-  securityRealm:
-    local:
-      users:
-        - id: "tim"
-          name: "Tim Hosey"
-          password: ${decodeBase64:${adminPassword}}
-          properties:
-            - blueSteelRedirectOptOutProperty:
-                optOut: true
-            - mailer:
-                emailAddress: "thosey@cloudbees.com"
-        - id: "orange"
-          name: "Orange Demo"
-          password: ${decodeBase64:${demoPassword}}
-          properties:
-            - blueSteelRedirectOptOutProperty:
-                optOut: true
-            - mailer:
-                emailAddress: "thosey+orange@cloudbees.com"
-        - id: "purple"
-          name: "Purple Demo"
-          password: ${decodeBase64:${demoPassword}}
-          properties:
-            - blueSteelRedirectOptOutProperty:
-                optOut: true
-            - mailer:
-                emailAddress: "thosey+purple@cloudbees.com"
   primaryView:
     masters:
       jobFilters:
@@ -71,31 +44,11 @@ tool:
   cloudbeesPluginUsageAnalyzer:
     enabled: true
 
-license:
-  certificate: ${licenseCert}
-  key: ${licenseKey}
-
 support:
   automatedBundleConfiguration:
     enabled: false
 
 unclassified:
-  bundleStorageService:
-    activated: true
-    bundles:
-      - name: "CBCI CasC Bundles"
-        retriever:
-          SCM:
-            defaultVersion: "main"
-            scmSource:
-              git:
-                remote: "https://github.com/timhosey/cbci-casc-bundles.git"
-                traits:
-                  - "gitBranchDiscovery"
-    pollingPeriod: 120
-    purgeOnDeactivation: true
-  bundleUpdateTiming:
-    automaticReload: true
   cascAutoControllerProvisioning:
     provisionControllerOnCreation: false
     fireAndForget: true
@@ -109,22 +62,3 @@ unclassified:
   usageStatisticsCloudBees:
     disabledJenkinsUsageStatistics: true
     usageStatisticsCollected: false
-
-credentials:
-  system:
-    domainCredentials:
-      - credentials:
-          - basicSSHUserPrivateKey:
-              id: "github-key"
-              privateKeySource:
-                directEntry:
-                  privateKey: ${githubKey}
-              scope: GLOBAL
-              username: "github-key"
-              usernameSecret: true
-          - string:
-              id: "github-token"
-              scope: GLOBAL
-              secret: ${githubToken}
-        domain:
-          name: "CasC"
