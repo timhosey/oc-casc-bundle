@@ -71,9 +71,9 @@ tool:
   cloudbeesPluginUsageAnalyzer:
     enabled: true
 
-license:
-  certificate: ${licenseCert}
-  key: ${licenseKey}
+# license:
+#   certificate: ${licenseCert}
+#   key: ${licenseKey}
 
 support:
   automatedBundleConfiguration:
